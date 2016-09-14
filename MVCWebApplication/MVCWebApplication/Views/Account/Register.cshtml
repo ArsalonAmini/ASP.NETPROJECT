@@ -29,13 +29,30 @@
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+    <br />
+    <div class="col-lg-offset-2 .col-lg-10">
+        <div class="dropdown">
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" p>
+                Please Select Your Account Type
+                <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+
+                <li>PLACE HOLDER</li>
+
+            </ul>
+
+        </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Register" />
+            </div>
+        </div>
+        }
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
