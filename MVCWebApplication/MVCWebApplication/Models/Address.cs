@@ -22,6 +22,12 @@ namespace MVCWebApplication.Models
 
         public City City { get; set; }
 
+
+        [ForeignKey("State")]
+        public int StateID { get; set; }
+
+        public State State { get; set; }
+
         [ForeignKey("Country")]
         public int CountryID { get; set; }
 

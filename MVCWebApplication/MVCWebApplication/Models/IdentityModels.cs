@@ -60,5 +60,6 @@ namespace MVCWebApplication.Models
         {
             get; set;
         }
+
     }
 }

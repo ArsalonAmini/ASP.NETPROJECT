@@ -39,7 +39,7 @@ namespace MVCWebApplication.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            ViewBag.AddressID = new SelectList(db.Address, "id", "id");
+            ViewBag.City = new SelectList(db.City, "id", "id");
             return View();
         }
 
@@ -48,17 +48,26 @@ namespace MVCWebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,DOB,AddressID")] Customer customer)
+        public ActionResult Create(ViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                db.Customer.Add(customer);
+                Address address = new Address();
+                address.City = viewModel.city;
+                address.Country = viewModel.Country;
+                address.State = viewModel.State;
+                
+                db.Customer.Add(viewModel.Customer);
+                db.Country.Add(viewModel.Country);
+                db.State.Add(viewModel.State);
+                db.Address.Add(address);
+                db.City.Add(viewModel.city);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AddressID = new SelectList(db.Address, "id", "id", customer.AddressID);
-            return View(customer);
+            ViewBag.AddressID = new SelectList(db.Address, "id", "id", viewModel.Customer.AddressID);
+            return View(viewModel.Customer);
         }
 
         // GET: Customers/Edit/5

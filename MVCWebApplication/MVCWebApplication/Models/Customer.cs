@@ -25,8 +25,7 @@ namespace MVCWebApplication.Models
         [ForeignKey("Address")]
 
         public int AddressID { get; set; }
-
-        [Required]
+        
         public Address Address  { get; set; }
     }
 }

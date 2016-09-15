@@ -231,6 +231,18 @@
     <Compile Include="Migrations\201609151723391_workername.Designer.cs">
       <DependentUpon>201609151723391_workername.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609151918141_viewmodel.cs" />
+    <Compile Include="Migrations\201609151918141_viewmodel.Designer.cs">
+      <DependentUpon>201609151918141_viewmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609151921336_viewkey.cs" />
+    <Compile Include="Migrations\201609151921336_viewkey.Designer.cs">
+      <DependentUpon>201609151921336_viewkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609152139476_address-state.cs" />
+    <Compile Include="Migrations\201609152139476_address-state.Designer.cs">
+      <DependentUpon>201609152139476_address-state.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -241,6 +253,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\State.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -383,6 +396,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609151723391_workername.resx">
       <DependentUpon>201609151723391_workername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609151918141_viewmodel.resx">
+      <DependentUpon>201609151918141_viewmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609151921336_viewkey.resx">
+      <DependentUpon>201609151921336_viewkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609152139476_address-state.resx">
+      <DependentUpon>201609152139476_address-state.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
