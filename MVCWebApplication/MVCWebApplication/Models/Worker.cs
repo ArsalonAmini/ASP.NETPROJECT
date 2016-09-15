@@ -14,11 +14,17 @@ namespace MVCWebApplication.Models
 
         public int Id { get; set; }
 
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
         [ForeignKey("ApplicationUser")]
 
         public string ApplicationUserID { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
+
+        
 
     }
 }
