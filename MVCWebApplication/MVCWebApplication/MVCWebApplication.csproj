@@ -203,6 +203,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -243,6 +244,14 @@
     <Compile Include="Migrations\201609152139476_address-state.Designer.cs">
       <DependentUpon>201609152139476_address-state.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609152234108_transaction.cs" />
+    <Compile Include="Migrations\201609152234108_transaction.Designer.cs">
+      <DependentUpon>201609152234108_transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609152304105_payment.cs" />
+    <Compile Include="Migrations\201609152304105_payment.Designer.cs">
+      <DependentUpon>201609152304105_payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -251,8 +260,11 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\TransactionViewModel.cs" />
     <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -366,6 +378,11 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Transactions\Create.cshtml" />
+    <Content Include="Views\Transactions\Delete.cshtml" />
+    <Content Include="Views\Transactions\Details.cshtml" />
+    <Content Include="Views\Transactions\Edit.cshtml" />
+    <Content Include="Views\Transactions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -405,6 +422,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609152139476_address-state.resx">
       <DependentUpon>201609152139476_address-state.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609152234108_transaction.resx">
+      <DependentUpon>201609152234108_transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609152304105_payment.resx">
+      <DependentUpon>201609152304105_payment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

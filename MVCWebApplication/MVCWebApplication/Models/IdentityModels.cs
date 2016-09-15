@@ -61,5 +61,21 @@ namespace MVCWebApplication.Models
             get; set;
         }
 
+        public DbSet<Transaction> Transaction
+        {
+            get; set;
+        }
+
+        public DbSet<Schedule> Schedule
+        {
+            get; set;
+        }
+
+        public DbSet<Payment> Payment
+        {
+            get; set;
+        }
+
+        public System.Data.Entity.DbSet<MVCWebApplication.Models.Transaction> Transactions { get; set; }
     }
 }
