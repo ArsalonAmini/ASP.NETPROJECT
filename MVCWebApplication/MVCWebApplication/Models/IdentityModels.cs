@@ -34,5 +34,31 @@ namespace MVCWebApplication.Models
         {
             get; set; 
         }
+
+        public DbSet<Customer> Customer
+        {
+            get; set;
+        }
+
+        public DbSet<Address> Address
+        {
+            get; set;
+
+        }
+
+        public DbSet<City> City
+        {
+            get; set;
+        }
+
+        public DbSet<Country> Country
+        {
+            get; set; 
+        }
+
+        public DbSet<State> State
+        {
+            get; set;
+        }
     }
 }
