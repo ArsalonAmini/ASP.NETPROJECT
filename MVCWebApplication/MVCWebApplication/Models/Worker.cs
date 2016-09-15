@@ -16,7 +16,7 @@ namespace MVCWebApplication.Models
 
         [ForeignKey("ApplicationUser")]
 
-        public int ApplicationUserID { get; set; }
+        public string ApplicationUserID { get; set; }
 
         public ApplicationUser ApplicationUser { get; set; }
 

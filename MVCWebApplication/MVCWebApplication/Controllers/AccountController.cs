@@ -81,7 +81,7 @@ namespace MVCWebApplication.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToLocal("NextProcess");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -154,8 +154,8 @@ namespace MVCWebApplication.Controllers
             if (ModelState.IsValid)
             {
                 var db = new ApplicationDbContext();
-                var ApplicationUser = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(ApplicationUser, model.Password);
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await UserManager.CreateAsync(user, model.Password);
 
                 //add user to role //dbo.AspNetUserRoles role
                 var roleStore = new RoleStore<IdentityRole>(db);
@@ -163,19 +163,19 @@ namespace MVCWebApplication.Controllers
 
                 var userStore = new UserStore<ApplicationUser>(db);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                userManager.AddToRole(ApplicationUser.Id, "worker");
+                userManager.AddToRole(user.Id, "worker");
 
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(ApplicationUser, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                    ViewBag.user = ApplicationUser;
-                    return RedirectToAction("NextProcess", "Home"); //("action name" , "controller name")
+                    ViewBag.user = user;
+                    return RedirectToAction("Index", "Home"); //("action name" , "controller name")
                     
                 }
                 AddErrors(result);
@@ -471,7 +471,7 @@ namespace MVCWebApplication.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Create", "Workers");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
