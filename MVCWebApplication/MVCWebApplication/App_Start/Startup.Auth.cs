@@ -53,10 +53,10 @@ namespace MVCWebApplication
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
             //   consumerSecret: "");
-
             app.UseFacebookAuthentication(
                appId: "699584513531724",
                appSecret: "31fb5c9f3e4a76c111cadda31769adfd");
+
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
