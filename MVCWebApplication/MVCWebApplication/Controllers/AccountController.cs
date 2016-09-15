@@ -154,8 +154,8 @@ namespace MVCWebApplication.Controllers
             if (ModelState.IsValid)
             {
                 var db = new ApplicationDbContext();
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
+                var ApplicationUser = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await UserManager.CreateAsync(ApplicationUser, model.Password);
 
                 //add user to role //dbo.AspNetUserRoles role
                 var roleStore = new RoleStore<IdentityRole>(db);
@@ -163,23 +163,20 @@ namespace MVCWebApplication.Controllers
 
                 var userStore = new UserStore<ApplicationUser>(db);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                userManager.AddToRole(user.Id, "worker");
+                userManager.AddToRole(ApplicationUser.Id, "worker");
 
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(ApplicationUser, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                    ViewBag.user = user;
+                    ViewBag.user = ApplicationUser;
                     return RedirectToAction("NextProcess", "Home"); //("action name" , "controller name")
                     
-                    //redirectToAction Usertype.Claims.modelview
-                
-
                 }
                 AddErrors(result);
             }
@@ -188,15 +185,14 @@ namespace MVCWebApplication.Controllers
             return View(model);
         }
 
-        //public ActionResult NextProcess()
-        //{
-        //    if (ViewBag.user != null)
-        //    {
-        //        //what happens next
-
-        //    return 
-        //    }
-        //}
+        public ActionResult NextProcess()
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            var UserId = User.Identity.GetUserId();
+            return RedirectToAction("Details", "worker", new { id = db.Worker.Include("ApplicationUsers").Where(x => x.ApplicationUser.Id == UserId).First().Id });
+        }
+        
+      
 
         //
         // GET: /Account/ConfirmEmail
