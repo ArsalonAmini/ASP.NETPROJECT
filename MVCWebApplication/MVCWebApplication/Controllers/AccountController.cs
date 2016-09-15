@@ -174,9 +174,11 @@ namespace MVCWebApplication.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-                    return RedirectToAction("Index", "Home"); //redirectToAction Usertype.Claims.modelview
-
+                    ViewBag.user = user;
+                    return RedirectToAction("NextProcess", "Home"); //("action name" , "controller name")
+                    
+                    //redirectToAction Usertype.Claims.modelview
+                
 
                 }
                 AddErrors(result);
@@ -185,6 +187,16 @@ namespace MVCWebApplication.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        //public ActionResult NextProcess()
+        //{
+        //    if (ViewBag.user != null)
+        //    {
+        //        //what happens next
+
+        //    return 
+        //    }
+        //}
 
         //
         // GET: /Account/ConfirmEmail

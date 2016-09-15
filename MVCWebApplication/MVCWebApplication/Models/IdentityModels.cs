@@ -30,6 +30,9 @@ namespace MVCWebApplication.Models
             return new ApplicationDbContext();
         }
 
-
+        public DbSet <Worker> Worker
+        {
+            get; set; 
+        }
     }
 }
