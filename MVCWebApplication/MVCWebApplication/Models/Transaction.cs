@@ -12,14 +12,9 @@ namespace MVCWebApplication.Models
         [Key]
         public int id { get; set; }
 
-        [Required]
-        [Display(Name = "RubbishRemovalDate")]
-        public int date { get; set; }
-
-        [ForeignKey("Service")]
-        public int ServiceId { get; set; }
-
-        public Service Service { get; set; }
+        [ForeignKey("Address")]
+        public int AddressId { get; set; }
+        public Address Address { get; set; }
 
         [ForeignKey("Schedule")]
         public int ScheduleId { get; set; }

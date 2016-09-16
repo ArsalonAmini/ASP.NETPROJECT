@@ -16,10 +16,6 @@ namespace MVCWebApplication.Models
         [Display(Name = "Name")]
         public string Name { get; set; }
 
-        [Required]
-        [Display(Name = "Date Of Birth")]
-        public int DOB { get; set; }
-
         [ForeignKey("Address")]
 
         public int AddressID { get; set; }

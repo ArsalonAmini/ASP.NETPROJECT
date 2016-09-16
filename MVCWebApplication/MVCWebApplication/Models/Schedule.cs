@@ -10,6 +10,13 @@ namespace MVCWebApplication.Models
     {
         [Key]
         public int id { get; set; }
-        public  int date { get; set; }
+
+        [Required]
+        [Display(Name = "StartDate")]
+        public int StartDate { get; set; }
+
+        [Required]
+        [Display(Name = "SkipDate")]
+        public int SkipDate { get; set; }
     }
 }

@@ -71,11 +71,6 @@ namespace MVCWebApplication.Models
             get; set;
         }
 
-        public DbSet<Service> Service
-        {
-            get; set;
-        }
-
         //public DbSet<Transaction> Transaction
         //{
         //    get; set;

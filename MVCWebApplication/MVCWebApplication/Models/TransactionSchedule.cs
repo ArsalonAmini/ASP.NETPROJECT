@@ -7,8 +7,9 @@ using System.Web;
 
 namespace MVCWebApplication.Models
 {
-    public class TransactionService
+    public class TransactionSchedule
     {
+
         [Key]
 
         public int id { get; set; }
@@ -16,11 +17,13 @@ namespace MVCWebApplication.Models
         [ForeignKey("Transaction")]
 
         public int TransactionId { get; set; }
+
         public Transaction Transaction { get; set; }
 
-        [ForeignKey("Service")]
+        [ForeignKey("Schedule")]
 
-        public int ServiceId { get; set; }
-        public Service Service { get; set; }
+        public int ScheduleId { get; set; }
+
+        public Schedule Schedule { get; set; }
     }
 }

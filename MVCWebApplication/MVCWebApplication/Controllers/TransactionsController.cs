@@ -50,12 +50,11 @@ namespace MVCWebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                //db.Transactions.Add(transactionViewModel.Schedule);
                 Transaction transaction = new Transaction();
-                transaction.Service = transactionViewModel.Service;
                 transaction.Schedule = transactionViewModel.Schedule;
+                transaction.Payment = transactionViewModel.Payment;
 
-                db.Service.Add(transactionViewModel.Service);
+                db.Payment.Add(transactionViewModel.Payment);
                 db.Schedule.Add(transactionViewModel.Schedule);
                 db.SaveChanges();
                 return RedirectToAction("Index");

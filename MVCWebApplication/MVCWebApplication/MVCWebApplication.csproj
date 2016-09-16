@@ -260,6 +260,14 @@
     <Compile Include="Migrations\201609160020181_updates.Designer.cs">
       <DependentUpon>201609160020181_updates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609161344443_transactionviewmodel.cs" />
+    <Compile Include="Migrations\201609161344443_transactionviewmodel.Designer.cs">
+      <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.cs" />
+    <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.Designer.cs">
+      <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -270,10 +278,9 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Schedule.cs" />
-    <Compile Include="Models\Service.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\Transaction.cs" />
-    <Compile Include="Models\TransactionService.cs" />
+    <Compile Include="Models\TransactionSchedule.cs" />
     <Compile Include="Models\TransactionViewModel.cs" />
     <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Models\Worker.cs" />
@@ -444,6 +451,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609160020181_updates.resx">
       <DependentUpon>201609160020181_updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161344443_transactionviewmodel.resx">
+      <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161406061_Schedule-startDate Rename.resx">
+      <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
