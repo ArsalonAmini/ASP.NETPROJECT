@@ -361,70 +361,13 @@
     <Content Include="Views\Transactions\Details.cshtml" />
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
-<<<<<<< HEAD
-=======
+
     <Content Include="Views\Workers\ViewCustomersMap.cshtml" />
->>>>>>> eac059dcd3342440469e1d159ee5b1a29e5c2963
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Views\Default\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
+
+
     <EmbeddedResource Include="Migrations\201609162105167_ScheduleCalendar.resx">
       <DependentUpon>201609162105167_ScheduleCalendar.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Migrations\201609141514245_InitialCreate.resx">
-      <DependentUpon>201609141514245_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609141849388_worker.resx">
-      <DependentUpon>201609141849388_worker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609141854467_customer.resx">
-      <DependentUpon>201609141854467_customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151409218_applicationUser.resx">
-      <DependentUpon>201609151409218_applicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151721342_customer-address.resx">
-      <DependentUpon>201609151721342_customer-address.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151723391_workername.resx">
-      <DependentUpon>201609151723391_workername.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151918141_viewmodel.resx">
-      <DependentUpon>201609151918141_viewmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151921336_viewkey.resx">
-      <DependentUpon>201609151921336_viewkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152139476_address-state.resx">
-      <DependentUpon>201609152139476_address-state.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152234108_transaction.resx">
-      <DependentUpon>201609152234108_transaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152304105_payment.resx">
-      <DependentUpon>201609152304105_payment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609160004369_schedule.resx">
-      <DependentUpon>201609160004369_schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609160020181_updates.resx">
-      <DependentUpon>201609160020181_updates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161344443_transactionviewmodel.resx">
-      <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
->>>>>>> eac059dcd3342440469e1d159ee5b1a29e5c2963
+
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609162237497_roleupdate.resx">
       <DependentUpon>201609162237497_roleupdate.cs</DependentUpon>
