@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201609162105167_ScheduleCalendar.Designer.cs">
       <DependentUpon>201609162105167_ScheduleCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609162237497_roleupdate.cs" />
+    <Compile Include="Migrations\201609162237497_roleupdate.Designer.cs">
+      <DependentUpon>201609162237497_roleupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -360,6 +364,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609162105167_ScheduleCalendar.resx">
       <DependentUpon>201609162105167_ScheduleCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609162237497_roleupdate.resx">
+      <DependentUpon>201609162237497_roleupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

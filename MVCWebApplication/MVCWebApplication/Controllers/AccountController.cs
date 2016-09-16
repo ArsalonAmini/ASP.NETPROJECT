@@ -143,15 +143,11 @@ namespace MVCWebApplication.Controllers
         {
             return View();
         }
-
-        //
-        // POST: /Account/Register
+        
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-
-
-        public async Task<ActionResult> RegisterAsWorker (RegisterViewModel model)
+        public async Task<ActionResult> RegisterAsCustomer(RegisterViewModel model, string Type)
         {
             if (ModelState.IsValid)
             {
@@ -169,14 +165,14 @@ namespace MVCWebApplication.Controllers
 
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                    //add user to role "worker"
-                    userManager.AddToRole(user.Id, "worker");
+                    //add user to role "Customer"
+                    userManager.AddToRole(user.Id, "customer");
 
                     ViewBag.user = user;
                     return RedirectToAction("Create", "Customers"); //("action name" , "controller name")
-                    
+
                 }
                 AddErrors(result);
             }
@@ -184,7 +180,6 @@ namespace MVCWebApplication.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
         public ActionResult NextProcess()
         {
             ApplicationDbContext db = new ApplicationDbContext();
