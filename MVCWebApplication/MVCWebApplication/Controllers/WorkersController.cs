@@ -14,11 +14,16 @@ namespace MVCWebApplication.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        
+        public ActionResult ViewCustomersMap()
+        {
+            return View();
+        }
         // GET: Workers
         public ActionResult Index()
         {
             var worker = db.Worker.Include(w => w.ApplicationUser);
-            return View(worker.ToList());
+             return View(worker.ToList());
         }
 
         // GET: Workers/Details/5
@@ -128,5 +133,9 @@ namespace MVCWebApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
+
+
     }
 }
