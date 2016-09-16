@@ -52,9 +52,11 @@ namespace MVCWebApplication.Controllers
             {
                 //db.Transactions.Add(transactionViewModel.Schedule);
                 Transaction transaction = new Transaction();
-                transaction.date = transactionViewModel.Date;
+                transaction.Service = transactionViewModel.Service;
+                transaction.Schedule = transactionViewModel.Schedule;
 
-                //db.Transactions.Add(transactionViewModel.Date);
+                db.Service.Add(transactionViewModel.Service);
+                db.Schedule.Add(transactionViewModel.Schedule);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
