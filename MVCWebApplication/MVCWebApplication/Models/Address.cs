@@ -15,7 +15,7 @@ namespace MVCWebApplication.Models
 
         [Required]
         [Display(Name = "Street")]
-        public int Street { get; set; }
+        public string Street { get; set; }
 
         [ForeignKey("City")]
         public int CityID { get; set; }

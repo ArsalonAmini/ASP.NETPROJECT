@@ -200,6 +200,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddressesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -242,6 +243,14 @@
     <Compile Include="Migrations\201609152139476_address-state.cs" />
     <Compile Include="Migrations\201609152139476_address-state.Designer.cs">
       <DependentUpon>201609152139476_address-state.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609160002163_Address.cs" />
+    <Compile Include="Migrations\201609160002163_Address.Designer.cs">
+      <DependentUpon>201609160002163_Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161419229_added address controler.cs" />
+    <Compile Include="Migrations\201609161419229_added address controler.Designer.cs">
+      <DependentUpon>201609161419229_added address controler.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -366,6 +375,11 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Addresses\Create.cshtml" />
+    <Content Include="Views\Addresses\Delete.cshtml" />
+    <Content Include="Views\Addresses\Details.cshtml" />
+    <Content Include="Views\Addresses\Edit.cshtml" />
+    <Content Include="Views\Addresses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -405,6 +419,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609152139476_address-state.resx">
       <DependentUpon>201609152139476_address-state.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609160002163_Address.resx">
+      <DependentUpon>201609160002163_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161419229_added address controler.resx">
+      <DependentUpon>201609161419229_added address controler.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
