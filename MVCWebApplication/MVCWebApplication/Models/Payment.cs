@@ -12,8 +12,10 @@ namespace MVCWebApplication.Models
 
         public int id { get; set; }
 
+        [Required]
         public int CreditCardNumber { get; set; }
 
+        [Display(Name = "ExpirationDate")]
         public int ExpirationDate { get; set; }
 
         public int SecurityCode { get; set; }

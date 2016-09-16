@@ -40,8 +40,6 @@
         </div>
     </div>
 
-    //add drop down menu
-
     <div class="col-lg-offset-2 .col-lg-10">
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" p>
@@ -49,12 +47,12 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li>PLACE HOLDER</li>
-                <li>PLACE HOLDER</li>
+                <li>@Html.ActionLink("Worker", "RegisterAsWorker", "AccountController")</li>
+                <li>@Html.ActionLink("Customer", "RegisterAsCustomer", "RegisterAsCustomer", "AccountController")</li>
             </ul>
         </div>
     </div>
-    <br />
+        <br />
     //end drop down menue
 
     <div class="form-group">

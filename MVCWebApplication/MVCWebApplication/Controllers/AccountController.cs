@@ -149,7 +149,9 @@ namespace MVCWebApplication.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+
+
+        public async Task<ActionResult> RegisterAsWorker (RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -157,25 +159,23 @@ namespace MVCWebApplication.Controllers
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
 
-                //add user to role //dbo.AspNetUserRoles role
+                //create role store and role manager
                 var roleStore = new RoleStore<IdentityRole>(db);
                 var roleManager = new RoleManager<IdentityRole>(roleStore);
 
+                //create userstore and usermanager
                 var userStore = new UserStore<ApplicationUser>(db);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                userManager.AddToRole(user.Id, "worker");
 
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    //add user to role "worker"
+                    userManager.AddToRole(user.Id, "worker");
+
                     ViewBag.user = user;
-                    return RedirectToAction("Index", "Home"); //("action name" , "controller name")
+                    return RedirectToAction("Create", "Customers"); //("action name" , "controller name")
                     
                 }
                 AddErrors(result);
