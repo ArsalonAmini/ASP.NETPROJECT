@@ -15,7 +15,6 @@ namespace MVCWebApplication.Models
 
             public State State { get; set; }
 
-            
             public string Street { get; set; }
 
             public City city { get; set; }

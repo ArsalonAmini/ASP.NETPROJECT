@@ -6,10 +6,14 @@ using System.Web;
 
 namespace MVCWebApplication.Models
 {
-    public class Schedule
+    public class Service
     {
         [Key]
+
         public int id { get; set; }
-        public  int date { get; set; }
+
+        public string Name { get; set; }
+
+
     }
 }

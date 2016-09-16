@@ -6,10 +6,15 @@ using System.Web;
 
 namespace MVCWebApplication.Models
 {
-    public class Schedule
+    public class Payment
     {
         [Key]
+
         public int id { get; set; }
-        public  int date { get; set; }
+
+        public int CreditCardNumber { get; set; }
+
+       
+
     }
 }
