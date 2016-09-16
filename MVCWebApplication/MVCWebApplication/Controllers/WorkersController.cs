@@ -14,6 +14,11 @@ namespace MVCWebApplication.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        
+        public ActionResult ViewCustomersMap()
+        {
+            return View();
+        }
         // GET: Workers
         public ActionResult Index()
         {
