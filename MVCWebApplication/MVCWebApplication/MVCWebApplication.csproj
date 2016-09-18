@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201609152304105_payment.Designer.cs">
       <DependentUpon>201609152304105_payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609160002163_Address.cs" />
+    <Compile Include="Migrations\201609160002163_Address.Designer.cs">
+      <DependentUpon>201609160002163_Address.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201609160004369_schedule.cs" />
     <Compile Include="Migrations\201609160004369_schedule.Designer.cs">
       <DependentUpon>201609160004369_schedule.cs</DependentUpon>
@@ -414,6 +418,11 @@
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Workers\ViewCustomersMap.cshtml" />
+    <Content Include="Views\Addresses\Create.cshtml" />
+    <Content Include="Views\Addresses\Delete.cshtml" />
+    <Content Include="Views\Addresses\Details.cshtml" />
+    <Content Include="Views\Addresses\Edit.cshtml" />
+    <Content Include="Views\Addresses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -460,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609152304105_payment.resx">
       <DependentUpon>201609152304105_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609160002163_Address.resx">
+      <DependentUpon>201609160002163_Address.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609160004369_schedule.resx">
       <DependentUpon>201609160004369_schedule.cs</DependentUpon>
