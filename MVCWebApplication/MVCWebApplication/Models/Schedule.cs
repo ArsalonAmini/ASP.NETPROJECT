@@ -12,16 +12,11 @@ namespace MVCWebApplication.Models
         public int id { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "StartDate")]
-        public string StartDate { get; set; }
+        public int StartDate { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "SkipDate")]
-        public string SkipDate { get; set; }
-    
+        public int SkipDate { get; set; }
     }
 }
