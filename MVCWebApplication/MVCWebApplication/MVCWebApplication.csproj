@@ -209,10 +209,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609141514245_InitialCreate.cs" />
-    <Compile Include="Migrations\201609141514245_InitialCreate.Designer.cs">
-      <DependentUpon>201609141514245_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201609162105167_ScheduleCalendar.cs" />
+    <Compile Include="Migrations\201609162105167_ScheduleCalendar.Designer.cs">
+      <DependentUpon>201609162105167_ScheduleCalendar.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Migrations\201609141849388_worker.cs" />
     <Compile Include="Migrations\201609141849388_worker.Designer.cs">
       <DependentUpon>201609141849388_worker.cs</DependentUpon>
@@ -272,6 +273,7 @@
     <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.cs" />
     <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.Designer.cs">
       <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\201609161541413_test.cs" />
     <Compile Include="Migrations\201609161541413_test.Designer.cs">
@@ -417,7 +419,9 @@
     <Content Include="Views\Transactions\Details.cshtml" />
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
+
     <Content Include="Views\Workers\ViewCustomersMap.cshtml" />
+
     <Content Include="Views\Addresses\Create.cshtml" />
     <Content Include="Views\Addresses\Delete.cshtml" />
     <Content Include="Views\Addresses\Details.cshtml" />
@@ -481,9 +485,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609161344443_transactionviewmodel.resx">
       <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
+
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161406061_Schedule-startDate Rename.resx">
-      <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609162237497_roleupdate.resx">
+      <DependentUpon>201609162237497_roleupdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609161541413_test.resx">
       <DependentUpon>201609161541413_test.cs</DependentUpon>
