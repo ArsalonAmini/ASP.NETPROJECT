@@ -18,7 +18,7 @@ namespace MVCWebApplication.Controllers
         // GET: Addresses
         public ActionResult Index()
         {
-            var address = db.Address.Include(a => a.City).Include(a => a.Country).Include(a => a.State);
+            var address = db.Address.Include(a => a.City).Include(a => a.State);
             return View(address.ToList());
         }
 
@@ -42,9 +42,10 @@ namespace MVCWebApplication.Controllers
         // GET: Addresses/Create
         public ActionResult Create()
         {
-            ViewBag.CityID = new SelectList(db.City, "ID", "Name");
-            ViewBag.CountryID = new SelectList(db.Country, "ID", "name");
-            ViewBag.StateID = new SelectList(db.State, "ID", "Name");
+            ViewBag.Street = new SelectList(db.Address, "Street", "Name");
+            //ViewBag.CityID = new SelectList(db.City, "ID", "Name");
+            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name");
+            //ViewBag.StateID = new SelectList(db.State, "ID", "Name");
             return View();
         }
 
@@ -62,9 +63,9 @@ namespace MVCWebApplication.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
-            ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
-            ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
+            //ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
+            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
+            //ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
             return View(address);
         }
 
@@ -80,9 +81,9 @@ namespace MVCWebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
-            ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
-            ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
+            //ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
+            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
+            //ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
             return View(address);
         }
 
@@ -99,9 +100,9 @@ namespace MVCWebApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
-            ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
-            ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
+            //ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
+            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
+            //ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
             return View(address);
         }
 

@@ -17,20 +17,15 @@ namespace MVCWebApplication.Models
         [Display(Name = "Street")]
         public string Street { get; set; }
 
-        [ForeignKey("City")]
-        public int CityID { get; set; }
+        [Required]
+        [Display(Name = "City")]
+        public string City { get; set; }
 
-        public City City { get; set; }
+        [Required]
+        [Display(Name = "State")]
+        public string State { get; set; }
 
 
-        [ForeignKey("State")]
-        public int StateID { get; set; }
-
-        public State State { get; set; }
-
-        [ForeignKey("Country")]
-        public int CountryID { get; set; }
-
-        public Country Country { get; set; }
+        
     }
 }

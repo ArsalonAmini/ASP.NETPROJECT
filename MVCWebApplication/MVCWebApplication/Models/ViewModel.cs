@@ -11,13 +11,10 @@ namespace MVCWebApplication.Models
      
             public Customer Customer { get; set; }
 
-            public Country Country { get; set; }
+            public Address Street { get; set; }
 
-            public State State { get; set; }
-
-            public string Street { get; set; }
-
-            public City city { get; set; }
+        public Address City { get; set; }
+        public Address State { get; set; }
 
     }
 }

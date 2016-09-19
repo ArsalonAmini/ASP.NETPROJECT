@@ -39,7 +39,7 @@ namespace MVCWebApplication.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            ViewBag.City = new SelectList(db.City, "id", "id");
+            //ViewBag.City = new SelectList(db.City, "id", "id");
             return View();
         }
 
@@ -53,15 +53,15 @@ namespace MVCWebApplication.Controllers
             if (ModelState.IsValid)
             {
                 Address address = new Address();
-                address.City = viewModel.city;
-                address.Country = viewModel.Country;
-                address.State = viewModel.State;
+                //address.City = viewModel.city;
+                //address.Country = viewModel.Country;
+                //address.State = viewModel.State;
                 
                 db.Customer.Add(viewModel.Customer);
-                db.Country.Add(viewModel.Country);
-                db.State.Add(viewModel.State);
+                //db.Country.Add(viewModel.Country);
+                //db.State.Add(viewModel.State);
                 db.Address.Add(address);
-                db.City.Add(viewModel.city);
+                //db.City.Add(viewModel.city);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

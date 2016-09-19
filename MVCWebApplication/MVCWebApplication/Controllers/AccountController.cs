@@ -378,7 +378,7 @@ namespace MVCWebApplication.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Manage");
+                return RedirectToAction("Index", "Worker");
             }
 
             if (ModelState.IsValid)
@@ -471,7 +471,7 @@ namespace MVCWebApplication.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Create", "Workers");
+            return RedirectToAction("Index", "Workers");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

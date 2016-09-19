@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMaps">
+      <HintPath>..\..\..\..\..\Downloads\GMaps.dll</HintPath>
+    </Reference>
     <Reference Include="JQueryUIHelpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=1440f6df3b58b47e, processorArchitecture=MSIL">
       <HintPath>..\packages\jQueryUIHelpers.Mvc5.3.0.0\lib\net45\JQueryUIHelpers.dll</HintPath>
       <Private>True</Private>
@@ -209,93 +212,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609141514245_InitialCreate.cs" />
-    <Compile Include="Migrations\201609141514245_InitialCreate.Designer.cs">
-      <DependentUpon>201609141514245_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609141849388_worker.cs" />
-    <Compile Include="Migrations\201609141849388_worker.Designer.cs">
-      <DependentUpon>201609141849388_worker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609141854467_customer.cs" />
-    <Compile Include="Migrations\201609141854467_customer.Designer.cs">
-      <DependentUpon>201609141854467_customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609151409218_applicationUser.cs" />
-    <Compile Include="Migrations\201609151409218_applicationUser.Designer.cs">
-      <DependentUpon>201609151409218_applicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609151721342_customer-address.cs" />
-    <Compile Include="Migrations\201609151721342_customer-address.Designer.cs">
-      <DependentUpon>201609151721342_customer-address.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609151723391_workername.cs" />
-    <Compile Include="Migrations\201609151723391_workername.Designer.cs">
-      <DependentUpon>201609151723391_workername.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609151918141_viewmodel.cs" />
-    <Compile Include="Migrations\201609151918141_viewmodel.Designer.cs">
-      <DependentUpon>201609151918141_viewmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609151921336_viewkey.cs" />
-    <Compile Include="Migrations\201609151921336_viewkey.Designer.cs">
-      <DependentUpon>201609151921336_viewkey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609152139476_address-state.cs" />
-    <Compile Include="Migrations\201609152139476_address-state.Designer.cs">
-      <DependentUpon>201609152139476_address-state.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609152234108_transaction.cs" />
-    <Compile Include="Migrations\201609152234108_transaction.Designer.cs">
-      <DependentUpon>201609152234108_transaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609152304105_payment.cs" />
-    <Compile Include="Migrations\201609152304105_payment.Designer.cs">
-      <DependentUpon>201609152304105_payment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609160002163_Address.cs" />
-    <Compile Include="Migrations\201609160002163_Address.Designer.cs">
-      <DependentUpon>201609160002163_Address.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609160004369_schedule.cs" />
-    <Compile Include="Migrations\201609160004369_schedule.Designer.cs">
-      <DependentUpon>201609160004369_schedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609160020181_updates.cs" />
-    <Compile Include="Migrations\201609160020181_updates.Designer.cs">
-      <DependentUpon>201609160020181_updates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161344443_transactionviewmodel.cs" />
-    <Compile Include="Migrations\201609161344443_transactionviewmodel.Designer.cs">
-      <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.cs" />
-    <Compile Include="Migrations\201609161406061_Schedule-startDate Rename.Designer.cs">
-      <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161541413_test.cs" />
-    <Compile Include="Migrations\201609161541413_test.Designer.cs">
-      <DependentUpon>201609161541413_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161544139_test2.cs" />
-    <Compile Include="Migrations\201609161544139_test2.Designer.cs">
-      <DependentUpon>201609161544139_test2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201609161900575_migrationadded.cs" />
-    <Compile Include="Migrations\201609161900575_migrationadded.Designer.cs">
-      <DependentUpon>201609161900575_migrationadded.cs</DependentUpon>
+    <Compile Include="Migrations\201609191900148_addada.cs" />
+    <Compile Include="Migrations\201609191900148_addada.Designer.cs">
+      <DependentUpon>201609191900148_addada.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\City.cs" />
-    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Schedule.cs" />
-    <Compile Include="Models\State.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\TransactionSchedule.cs" />
     <Compile Include="Models\TransactionViewModel.cs" />
@@ -437,62 +365,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609141514245_InitialCreate.resx">
-      <DependentUpon>201609141514245_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609141849388_worker.resx">
-      <DependentUpon>201609141849388_worker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609141854467_customer.resx">
-      <DependentUpon>201609141854467_customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151409218_applicationUser.resx">
-      <DependentUpon>201609151409218_applicationUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151721342_customer-address.resx">
-      <DependentUpon>201609151721342_customer-address.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151723391_workername.resx">
-      <DependentUpon>201609151723391_workername.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151918141_viewmodel.resx">
-      <DependentUpon>201609151918141_viewmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609151921336_viewkey.resx">
-      <DependentUpon>201609151921336_viewkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152139476_address-state.resx">
-      <DependentUpon>201609152139476_address-state.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152234108_transaction.resx">
-      <DependentUpon>201609152234108_transaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609152304105_payment.resx">
-      <DependentUpon>201609152304105_payment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609160002163_Address.resx">
-      <DependentUpon>201609160002163_Address.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609160004369_schedule.resx">
-      <DependentUpon>201609160004369_schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609160020181_updates.resx">
-      <DependentUpon>201609160020181_updates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161344443_transactionviewmodel.resx">
-      <DependentUpon>201609161344443_transactionviewmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161406061_Schedule-startDate Rename.resx">
-      <DependentUpon>201609161406061_Schedule-startDate Rename.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161541413_test.resx">
-      <DependentUpon>201609161541413_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161544139_test2.resx">
-      <DependentUpon>201609161544139_test2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201609161900575_migrationadded.resx">
-      <DependentUpon>201609161900575_migrationadded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609191900148_addada.resx">
+      <DependentUpon>201609191900148_addada.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

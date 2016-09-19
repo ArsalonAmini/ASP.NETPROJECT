@@ -46,20 +46,11 @@ namespace MVCWebApplication.Models
 
         }
 
-        public DbSet<City> City
-        {
-            get; set;
-        }
+        
 
-        public DbSet<Country> Country
-        {
-            get; set; 
-        }
+        
 
-        public DbSet<State> State
-        {
-            get; set;
-        }
+        
 
         public DbSet<Schedule> Schedule
         {
