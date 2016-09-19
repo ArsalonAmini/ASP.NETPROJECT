@@ -3,7 +3,7 @@ namespace MVCWebApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class roleupdate : DbMigration
+    public partial class transaction : DbMigration
     {
         public override void Up()
         {

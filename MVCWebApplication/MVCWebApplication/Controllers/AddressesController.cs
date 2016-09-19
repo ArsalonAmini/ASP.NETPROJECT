@@ -22,6 +22,8 @@ namespace MVCWebApplication.Controllers
             return View(address.ToList());
         }
 
+        
+
         // GET: Addresses/Details/5
         public ActionResult Details(int? id)
         {

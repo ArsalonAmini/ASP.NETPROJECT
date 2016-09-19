@@ -7,13 +7,13 @@ namespace MVCWebApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class roleupdate : IMigrationMetadata
+    public sealed partial class schedule : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(roleupdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(schedule));
         
         string IMigrationMetadata.Id
         {
-            get { return "201609162237497_roleupdate"; }
+            get { return "201609160004369_schedule"; }
         }
         
         string IMigrationMetadata.Source
