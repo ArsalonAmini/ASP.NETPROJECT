@@ -158,12 +158,12 @@ namespace MVCWebApplication.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
 
                 //add user to role //dbo.AspNetUserRoles role
-                var roleStore = new RoleStore<IdentityRole>(db);
-                var roleManager = new RoleManager<IdentityRole>(roleStore);
+                //var roleStore = new RoleStore<IdentityRole>(db);
+                //var roleManager = new RoleManager<IdentityRole>(roleStore);
 
-                var userStore = new UserStore<ApplicationUser>(db);
-                var userManager = new UserManager<ApplicationUser>(userStore);
-                userManager.AddToRole(user.Id, "worker");
+                //var userStore = new UserStore<ApplicationUser>(db);
+                //var userManager = new UserManager<ApplicationUser>(userStore);
+                //userManager.AddToRole(user.Id, "worker");
 
                 if (result.Succeeded)
                 {
@@ -175,7 +175,7 @@ namespace MVCWebApplication.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
                     ViewBag.user = user;
-                    return RedirectToAction("Index", "Home"); //("action name" , "controller name")
+                    return RedirectToAction("Create", "Customers"); //("action name" , "controller name")
                     
                 }
                 AddErrors(result);

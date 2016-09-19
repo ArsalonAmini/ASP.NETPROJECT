@@ -21,5 +21,6 @@ namespace MVCWebApplication.Models
         public int AddressID { get; set; }
         
         public Address Address  { get; set; }
+
     }
 }

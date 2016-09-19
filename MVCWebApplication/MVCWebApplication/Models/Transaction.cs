@@ -12,21 +12,19 @@ namespace MVCWebApplication.Models
         [Key]
         public int id { get; set; }
 
-        [ForeignKey("Address")]
-        public int AddressId { get; set; }
-        public Address Address { get; set; }
-
-        [ForeignKey("Schedule")]
-        public int ScheduleId { get; set; }
-
-        public Schedule Schedule { get; set; }
+        [ForeignKey("Customer")]
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
         [ForeignKey("Payment")]
         public int PaymentId { get; set; }
 
         public Payment Payment { get; set; }
 
+        [ForeignKey("Schedule")]
+        public int ScheduleId { get; set; }
 
+        public Schedule Schedule { get; set; }
 
     }
 }

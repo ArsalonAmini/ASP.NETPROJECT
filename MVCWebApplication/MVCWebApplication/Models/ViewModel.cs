@@ -8,13 +8,11 @@ namespace MVCWebApplication.Models
 {
     public class ViewModel
     {
-     
-            public Customer Customer { get; set; }
 
-            public Address Street { get; set; }
+        public Customer Customer { get; set; }
 
-        public Address City { get; set; }
-        public Address State { get; set; }
+        public Address Address { get; set; }
+        
 
     }
 }

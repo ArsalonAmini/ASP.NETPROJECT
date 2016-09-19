@@ -216,13 +216,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609191900148_addada.cs" />
-    <Compile Include="Migrations\201609191900148_addada.Designer.cs">
-      <DependentUpon>201609191900148_addada.cs</DependentUpon>
+    <Compile Include="Migrations\201609191913517_initial.cs" />
+    <Compile Include="Migrations\201609191913517_initial.Designer.cs">
+      <DependentUpon>201609191913517_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609191506274_things.cs" />
-    <Compile Include="Migrations\201609191506274_things.Designer.cs">
-      <DependentUpon>201609191506274_things.cs</DependentUpon>
+    <Compile Include="Migrations\201609191947461_go.cs" />
+    <Compile Include="Migrations\201609191947461_go.Designer.cs">
+      <DependentUpon>201609191947461_go.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192134201_updated Transaction.cs" />
+    <Compile Include="Migrations\201609192134201_updated Transaction.Designer.cs">
+      <DependentUpon>201609192134201_updated Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192149394_k.cs" />
+    <Compile Include="Migrations\201609192149394_k.Designer.cs">
+      <DependentUpon>201609192149394_k.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192240033_transactionmodelupdate.cs" />
+    <Compile Include="Migrations\201609192240033_transactionmodelupdate.Designer.cs">
+      <DependentUpon>201609192240033_transactionmodelupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201609191959380_address.cs" />
     <Compile Include="Migrations\201609191959380_address.Designer.cs">
@@ -297,6 +309,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+
     <EmbeddedResource Include="Migrations\201609191506274_things.resx">
       <DependentUpon>201609191506274_things.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +319,7 @@
     <EmbeddedResource Include="Migrations\201609192237060_map.resx">
       <DependentUpon>201609192237060_map.cs</DependentUpon>
     </EmbeddedResource>
+
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -391,8 +405,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+
     <EmbeddedResource Include="Migrations\201609191900148_addada.resx">
       <DependentUpon>201609191900148_addada.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
