@@ -212,13 +212,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609191900148_addada.cs" />
-    <Compile Include="Migrations\201609191900148_addada.Designer.cs">
-      <DependentUpon>201609191900148_addada.cs</DependentUpon>
+    <Compile Include="Migrations\201609191913517_initial.cs" />
+    <Compile Include="Migrations\201609191913517_initial.Designer.cs">
+      <DependentUpon>201609191913517_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609191506274_things.cs" />
-    <Compile Include="Migrations\201609191506274_things.Designer.cs">
-      <DependentUpon>201609191506274_things.cs</DependentUpon>
+    <Compile Include="Migrations\201609191947461_go.cs" />
+    <Compile Include="Migrations\201609191947461_go.Designer.cs">
+      <DependentUpon>201609191947461_go.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192134201_updated Transaction.cs" />
+    <Compile Include="Migrations\201609192134201_updated Transaction.Designer.cs">
+      <DependentUpon>201609192134201_updated Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192149394_k.cs" />
+    <Compile Include="Migrations\201609192149394_k.Designer.cs">
+      <DependentUpon>201609192149394_k.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192240033_transactionmodelupdate.cs" />
+    <Compile Include="Migrations\201609192240033_transactionmodelupdate.Designer.cs">
+      <DependentUpon>201609192240033_transactionmodelupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -284,9 +296,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Migrations\201609191506274_things.resx">
-      <DependentUpon>201609191506274_things.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -353,7 +362,6 @@
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Workers\ViewCustomersMap.cshtml" />
-
     <Content Include="Views\Addresses\Create.cshtml" />
     <Content Include="Views\Addresses\Delete.cshtml" />
     <Content Include="Views\Addresses\Details.cshtml" />
@@ -373,10 +381,20 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-
-    <EmbeddedResource Include="Migrations\201609191900148_addada.resx">
-      <DependentUpon>201609191900148_addada.cs</DependentUpon>
-
+    <EmbeddedResource Include="Migrations\201609191913517_initial.resx">
+      <DependentUpon>201609191913517_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609191947461_go.resx">
+      <DependentUpon>201609191947461_go.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609192134201_updated Transaction.resx">
+      <DependentUpon>201609192134201_updated Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609192149394_k.resx">
+      <DependentUpon>201609192149394_k.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609192240033_transactionmodelupdate.resx">
+      <DependentUpon>201609192240033_transactionmodelupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
