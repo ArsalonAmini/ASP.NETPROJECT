@@ -81,7 +81,7 @@ namespace MVCWebApplication.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal("NextProcess");
+                    return RedirectToAction("Create", "transactions");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -182,9 +182,7 @@ namespace MVCWebApplication.Controllers
         }
         public ActionResult NextProcess()
         {
-            ApplicationDbContext db = new ApplicationDbContext();
-            var UserId = User.Identity.GetUserId();
-            return RedirectToAction("Details", "worker", new { id = db.Worker.Include("ApplicationUsers").Where(x => x.ApplicationUser.Id == UserId).First().Id });
+            return RedirectToAction("Create", "transaction");
         }
         
       

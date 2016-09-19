@@ -13,7 +13,7 @@ namespace MVCWebApplication.Models
 
         public int id { get; set; }
 
-        [Required]
+     
         [Display(Name = "Street")]
         public string Street { get; set; }
 
