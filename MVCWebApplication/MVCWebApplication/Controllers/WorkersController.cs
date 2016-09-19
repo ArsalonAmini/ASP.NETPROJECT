@@ -13,11 +13,13 @@ namespace MVCWebApplication.Controllers
     public class WorkersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+         
 
-        
         public ActionResult ViewCustomersMap()
         {
-            return View();
+            var address = db.Address.Include(a => a.Street).Include(a => a.City).Include(a => a.State).Include(a => a.Latitude).Include(a => a.Longitude);
+            List<Address> addressList = new List<Address>();
+            return View(addressList);
         }
         // GET: Workers
         public ActionResult Index()
@@ -26,6 +28,7 @@ namespace MVCWebApplication.Controllers
              return View(worker.ToList());
         }
 
+        
         // GET: Workers/Details/5
         public ActionResult Details(int? id)
         {

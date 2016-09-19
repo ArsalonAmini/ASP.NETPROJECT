@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVCWebApplication.Models;
+using GoogleMaps.LocationServices;
+using Microsoft.AspNet.Identity;
 
 namespace MVCWebApplication.Controllers
 {
@@ -18,10 +20,11 @@ namespace MVCWebApplication.Controllers
         // GET: Addresses
         public ActionResult Index()
         {
-            var address = db.Address.Include(a => a.City).Include(a => a.State);
+            var address = db.Address;
             return View(address.ToList());
         }
 
+        
         
 
         // GET: Addresses/Details/5
@@ -39,33 +42,34 @@ namespace MVCWebApplication.Controllers
             return View(address);
         }
 
-        // GET: Addresses/Create
-        public ActionResult Create()
-        {
-            ViewBag.Street = new SelectList(db.Address, "Street", "Name");
-            //ViewBag.CityID = new SelectList(db.City, "ID", "Name");
-            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name");
-            //ViewBag.StateID = new SelectList(db.State, "ID", "Name");
-            return View();
-        }
+        
+        
 
         // POST: Addresses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Street,CityID,StateID,CountryID")] Address address)
+        public ActionResult Create([Bind(Include = "Street,City,State,Latitude, Longitude")] Address address)
         {
+            
             if (ModelState.IsValid)
             {
+                var location = address.Street + address.City;
+                var locationService = new GoogleLocationService();
+                var point = locationService.GetLatLongFromAddress(location);
+                var latitude = point.Latitude;
+                var longitude = point.Longitude;
+                address.Latitude = latitude;
+                address.Longitude = longitude;
+
                 db.Address.Add(address);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Create", "Services");
             }
 
-            //ViewBag.CityID = new SelectList(db.City, "ID", "Name", address.CityID);
-            //ViewBag.CountryID = new SelectList(db.Country, "ID", "name", address.CountryID);
-            //ViewBag.StateID = new SelectList(db.State, "ID", "Name", address.StateID);
+            ViewBag.UserId = new SelectList(db.Users, "Id", "FirstName", address.id);
             return View(address);
         }
 

@@ -47,6 +47,10 @@
     <Reference Include="GMaps">
       <HintPath>..\..\..\..\..\Downloads\GMaps.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMaps.LocationServices, Version=0.1.5926.26040, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleMaps.LocationServices.0.9.8.6\lib\net40\GoogleMaps.LocationServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="JQueryUIHelpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=1440f6df3b58b47e, processorArchitecture=MSIL">
       <HintPath>..\packages\jQueryUIHelpers.Mvc5.3.0.0\lib\net45\JQueryUIHelpers.dll</HintPath>
       <Private>True</Private>
@@ -220,6 +224,14 @@
     <Compile Include="Migrations\201609191506274_things.Designer.cs">
       <DependentUpon>201609191506274_things.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609191959380_address.cs" />
+    <Compile Include="Migrations\201609191959380_address.Designer.cs">
+      <DependentUpon>201609191959380_address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609192237060_map.cs" />
+    <Compile Include="Migrations\201609192237060_map.Designer.cs">
+      <DependentUpon>201609192237060_map.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -277,6 +289,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="GoogleMaps.LocationServices.readme.txt" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -286,6 +299,12 @@
     </Content>
     <EmbeddedResource Include="Migrations\201609191506274_things.resx">
       <DependentUpon>201609191506274_things.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609191959380_address.resx">
+      <DependentUpon>201609191959380_address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609192237060_map.resx">
+      <DependentUpon>201609192237060_map.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -353,7 +372,6 @@
     <Content Include="Views\Transactions\Edit.cshtml" />
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Workers\ViewCustomersMap.cshtml" />
-
     <Content Include="Views\Addresses\Create.cshtml" />
     <Content Include="Views\Addresses\Delete.cshtml" />
     <Content Include="Views\Addresses\Details.cshtml" />
@@ -373,10 +391,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-
     <EmbeddedResource Include="Migrations\201609191900148_addada.resx">
       <DependentUpon>201609191900148_addada.cs</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
