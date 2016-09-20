@@ -26,6 +26,7 @@
         <th></th>
     </tr>*@
 
+
 @foreach (var item in Model) {
     <tr>
        
@@ -44,6 +45,40 @@
 
     
 </table>
+
+<div id="map" style="height: 500px"></div>
+<script>
+    function addMarker(location) {
+        var marker = new google.maps.Marker({
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+            position: location,
+            title: 'Bomb',
+            map: map,
+            icon: bomb
+        });
+        markersArray.push(marker);
+    }
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: new google.maps.LatLng(43.0167, -88, 0070),
+          zoom: 10
+        });
+      }
+    @foreach(var item in Model)
+      {
+          <text>
+             markersArray.push(new google.maps.Marker({
+                 draggable: true,
+                 animation: google.maps.Animation.DROP,
+                 position: new google.maps.LatLng('@item.Latitude', '@item.Longitude', false),
+                 title: 'Whatever title',
+                 map: _map
+             }));
+         </text>
+      }
+</script>
 <script>
         //var map;
 
@@ -66,22 +101,13 @@
             </text>
             }
 
-
+    
         
 
 </script>
 
 
-<div id="map" style="height: 500px"></div>
-<script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-</script>
+
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSUoZb1G7FkVWD_qBzlVhRhxvftCiTPQ4&v=3&callback=initMap">
 </script>
