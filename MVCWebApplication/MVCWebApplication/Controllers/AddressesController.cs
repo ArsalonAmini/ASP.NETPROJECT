@@ -50,7 +50,7 @@ namespace MVCWebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Street,City,State,Latitude, Longitude")] Address address)
+        public ActionResult Create ([Bind(Include = "Street,City,State,Latitude, Longitude")] Address address)
         {
             
             if (ModelState.IsValid)
@@ -66,7 +66,7 @@ namespace MVCWebApplication.Controllers
                 db.Address.Add(address);
                 db.SaveChanges();
                 //return RedirectToAction("Index");
-                return RedirectToAction("Create", "Services");
+                return RedirectToAction("Index", "Addresses");
             }
 
             ViewBag.UserId = new SelectList(db.Users, "Id", "FirstName", address.id);

@@ -220,6 +220,10 @@
     <Compile Include="Migrations\201609192328552_adding models.Designer.cs">
       <DependentUpon>201609192328552_adding models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609201233213_addressschange.cs" />
+    <Compile Include="Migrations\201609201233213_addressschange.Designer.cs">
+      <DependentUpon>201609201233213_addressschange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -372,6 +376,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609192328552_adding models.resx">
       <DependentUpon>201609192328552_adding models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201233213_addressschange.resx">
+      <DependentUpon>201609201233213_addressschange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

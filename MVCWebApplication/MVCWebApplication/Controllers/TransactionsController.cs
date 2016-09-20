@@ -57,7 +57,7 @@ namespace MVCWebApplication.Controllers
                 db.Payment.Add(transactionViewModel.Payment);
                 db.Schedule.Add(transactionViewModel.Schedule);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Addresses");
             }
 
             return View(transactionViewModel);
